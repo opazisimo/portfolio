@@ -11,11 +11,25 @@
     }
   }
   .botones{
-    width: 100%;
-    margin: 0auto;
+    .btn {
+      color: $k;
+      display: inline-block;
+      text-align: center;
+      border: 5px solid $yel;
+      font-weight: 300;
+      font-size:16px;
+      background-color: $yel;
+      margin: 20px 0px;
+      border-radius: 0px !important;
+      &:hover{
+        background-color: $crim;
+        border: 5px solid $crim;
+      }
+    }
     .nav-pills{
         li {
           color: $k;
+          display: inline-block;
           text-align: center;
           @media (max-width: 600px) {
             width: 100%;
@@ -35,28 +49,34 @@
     }
   }
   .muestras {
-  .tab-content {
-    margin:50px;
-  }
-  .workDesign{
-    img {
-      width: 50px;
-      margin: 10px 0px;
-      @media (max-width: 600px) {
-        width: 40px !important;
-        margin:10px;
+    .tab-content {
+      margin:50px;
+    }
+    .workDesign{
+      img {
+        width: 100px;
+        margin: 10px 0px;
+        @media (max-width: 600px) {
+          width: 40px !important;
+          margin:10px;
+        }
+        &:hover {
+          @include movs;
+        }
       }
     }
-  }
-  .frontEnd{
-    img {
-      width: 50px;
-      margin: 10px 0px;
-      @media (max-width: 600px) {
-        width: 100% !important;
-        margin:10px;
+    .frontEnd{
+      img {
+        width: 100px;
+        margin: 10px 0px;
+        @media (max-width: 600px) {
+          width: 100% !important;
+          margin:10px;
+        }
+        &:hover {
+          @include movs;
+        }
       }
     }
-  }
   }
 }

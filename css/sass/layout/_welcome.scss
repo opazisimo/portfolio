@@ -6,6 +6,9 @@
   .bgcrim {
     padding: 8px;
     background-color: $crim;
+    @media (max-width: 600px) {
+      font-size: 1em !important;
+    }
   }
   .w-1 {
     img {

@@ -26,6 +26,13 @@
             font-size: 4em;
             line-height: 50px;
           }
+          &:hover {
+            -moz-transform: scale(1.5) rotate(10deg);
+            -webkit-transform: scale(1.5) rotate(10deg);
+            -o-transform: scale(1.5) rotate(10deg);
+            -ms-transform: scale(1.5) rotate(10deg);
+            transform: scale(1.5) rotate(10deg);
+          }
         }
       }
       h2{

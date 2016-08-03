@@ -135,6 +135,9 @@ p {
   #welcome .bgcrim {
     padding: 8px;
     background-color: #EF133B; }
+    @media (max-width: 600px) {
+      #welcome .bgcrim {
+        font-size: 1em !important; } }
   #welcome .w-1 img {
     width: 300px; }
   #welcome .w-1 .img-cont {
@@ -250,6 +253,12 @@ p {
           #three .content .tri .icons i {
             font-size: 4em;
             line-height: 50px; } }
+        #three .content .tri .icons i:hover {
+          -moz-transform: scale(1.5) rotate(10deg);
+          -webkit-transform: scale(1.5) rotate(10deg);
+          -o-transform: scale(1.5) rotate(10deg);
+          -ms-transform: scale(1.5) rotate(10deg);
+          transform: scale(1.5) rotate(10deg); }
     #three .content .tri h2 {
       font-weight: 900;
       font-size: 3em;
@@ -298,40 +307,63 @@ p {
   text-align: justify; }
   #mySkills .texto p {
     font-size: 1.2em; }
-#mySkills .botones {
-  width: 100%;
-  margin: 0auto; }
-  #mySkills .botones .nav-pills li {
-    color: black;
-    text-align: center; }
-    @media (max-width: 600px) {
-      #mySkills .botones .nav-pills li {
-        width: 100%;
-        display: block;
-        margin-top: 10px; } }
-    #mySkills .botones .nav-pills li a {
-      border: 5px solid #FFD726;
-      color: black !important;
-      font-weight: 300;
-      font-size: 16px; }
-      #mySkills .botones .nav-pills li a:hover {
-        background-color: #FFD726; }
+#mySkills .botones .btn {
+  color: black;
+  display: inline-block;
+  text-align: center;
+  border: 5px solid #FFD726;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: #FFD726;
+  margin: 20px 0px;
+  border-radius: 0px !important; }
+  #mySkills .botones .btn:hover {
+    background-color: #EF133B;
+    border: 5px solid #EF133B; }
+#mySkills .botones .nav-pills li {
+  color: black;
+  display: inline-block;
+  text-align: center; }
+  @media (max-width: 600px) {
+    #mySkills .botones .nav-pills li {
+      width: 100%;
+      display: block;
+      margin-top: 10px; } }
+  #mySkills .botones .nav-pills li a {
+    border: 5px solid #FFD726;
+    color: black !important;
+    font-weight: 300;
+    font-size: 16px; }
+    #mySkills .botones .nav-pills li a:hover {
+      background-color: #FFD726; }
 #mySkills .muestras .tab-content {
   margin: 50px; }
 #mySkills .muestras .workDesign img {
-  width: 50px;
+  width: 100px;
   margin: 10px 0px; }
   @media (max-width: 600px) {
     #mySkills .muestras .workDesign img {
       width: 40px !important;
       margin: 10px; } }
+  #mySkills .muestras .workDesign img:hover {
+    -moz-transform: scale(1.2) rotate(-10deg);
+    -webkit-transform: scale(1.2) rotate(-10deg);
+    -o-transform: scale(1.2) rotate(-10deg);
+    -ms-transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) rotate(-10deg); }
 #mySkills .muestras .frontEnd img {
-  width: 50px;
+  width: 100px;
   margin: 10px 0px; }
   @media (max-width: 600px) {
     #mySkills .muestras .frontEnd img {
       width: 100% !important;
       margin: 10px; } }
+  #mySkills .muestras .frontEnd img:hover {
+    -moz-transform: scale(1.2) rotate(-10deg);
+    -webkit-transform: scale(1.2) rotate(-10deg);
+    -o-transform: scale(1.2) rotate(-10deg);
+    -ms-transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) rotate(-10deg); }
 
 #head .navbar {
   background-color: white;
