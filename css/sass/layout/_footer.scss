@@ -1,0 +1,15 @@
+#foot {
+  @include gralStyle;
+  img {
+    width: 100px;
+    margin: 20px 0px;
+  }
+  a {
+    font-size:40px;
+    color: $k;
+    margin-top: 10px;
+    &:hover {
+      color: $crim;
+    }
+  }
+}

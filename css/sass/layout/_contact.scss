@@ -1,0 +1,24 @@
+#contact{
+  @include titulos;
+  .subti {
+    @include subraya;
+  }
+    .texto {
+    margin: 50px;
+    text-align: center;
+    p{
+    font-size: 1.2em;
+    }
+  }
+  .iconos {
+    a{
+      font-size: 100px;
+      color: $crim;
+      i {
+        &:hover{
+          color: $yel;
+        }
+      }
+    }
+  }
+}

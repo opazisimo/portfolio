@@ -1,0 +1,151 @@
+@mixin gralStyle{
+  background-color: $yel;
+  color: $k;
+}
+
+@mixin titulos {
+  h1 {
+  font-size: 4em;
+  font-weight: 300 !important;
+  color: $k !important;
+    @media (max-width: 600px) {
+      font-size: 2em;
+    }
+  }
+}
+
+@mixin subraya {
+    padding: 8px;
+    background-color: $crim;
+}
+
+@mixin textos($align){
+  .texto {
+    margin-top: 30px;
+    text-align: $align;
+    width: 70%;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+    p{
+    font-size: 1.2em;
+    }
+  }
+}
+// Mixin diagonal. Agradecimientos a X.
+@mixin angle($pseudo, $flip: false, $angle: 1.5deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+// slanted edges here
+.edge--bottom {
+  @include angle(after);
+}
+
+.edge--bottom--reverse {
+  @include angle(after, true);
+}
+
+.edge--top {
+  @include angle(before);
+}
+
+.edge--top--reverse {
+  @include angle(before, true);
+}
+
+.edge--both {
+  @include angle(both);
+}
+
+.edge--both--reverse {
+  @include angle(both, true);
+}
+
+// demo code below
+.block {
+  margin: 0 0 100px;
+  padding: 10% 10px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 0.5em;
+}

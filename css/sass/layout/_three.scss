@@ -1,0 +1,41 @@
+#three {
+  @include gralStyle;
+  @include titulos;
+  .subti {
+    @include subraya;
+  }
+
+  .content {
+    margin-top: 30px;
+    .tri{
+      .texto {
+        width: 100%;
+        margin: 0 auto;
+      }
+      @include textos(center);
+      .icons{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: $crim;
+        margin-top: 40px;
+        i {
+          font-size:8em;
+          line-height: 150px;
+          @media (max-width: 600px) {
+            font-size: 4em;
+            line-height: 50px;
+          }
+        }
+      }
+      h2{
+        font-weight: 900;
+        font-size: 3em;
+        color: $crim;
+        @media (max-width: 600px) {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}

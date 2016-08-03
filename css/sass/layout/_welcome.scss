@@ -1,0 +1,55 @@
+#welcome {
+  @include gralStyle;
+  #p1,#p2,#p3,#p4 {
+    display: none;
+  }
+  .bgcrim {
+    padding: 8px;
+    background-color: $crim;
+  }
+  .w-1 {
+    img {
+      width: 300px;
+    }
+    .img-cont {
+      border: 20px solid $k;
+      padding: 100px 40px 20px 30px;
+      background-color: $wh;
+      .framecrim {
+        width: 300px;
+        height: 300px;
+        border: 20px solid $yel;
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+      }
+      .framewh {
+        width: 100px;
+        height: 100px;
+        border: 10px solid $crim;
+        position: absolute;
+        bottom: 50px;
+        left: 500px;
+      }
+    }
+  }
+  .w-2 {
+    text-align: right;
+    color: $k !important;
+      @media (max-width: 600px) {
+        padding-top: 50px;
+      }
+    h1 {
+      font-size: 4em;
+      & .title {
+        font-weight: 900 !important;
+      }
+      & .subti {
+        font-weight: 300 !important;
+      }
+      @media (max-width: 600px) {
+        font-size: 2em;
+      }
+    }
+  }
+}

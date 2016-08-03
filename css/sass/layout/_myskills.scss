@@ -1,0 +1,62 @@
+#mySkills{
+  @include titulos;
+  .subti {
+    @include subraya;
+  }
+    .texto {
+    margin-top: 50px;
+    text-align: justify;
+    p{
+    font-size: 1.2em;
+    }
+  }
+  .botones{
+    width: 100%;
+    margin: 0auto;
+    .nav-pills{
+        li {
+          color: $k;
+          text-align: center;
+          @media (max-width: 600px) {
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+          }
+          a {
+            border: 5px solid $yel;
+            color: $k !important;
+            font-weight: 300;
+            font-size:16px;
+              &:hover{
+                background-color: $yel;
+              }
+          }
+        }
+    }
+  }
+  .muestras {
+  .tab-content {
+    margin:50px;
+  }
+  .workDesign{
+    img {
+      width: 50px;
+      margin: 10px 0px;
+      @media (max-width: 600px) {
+        width: 40px !important;
+        margin:10px;
+      }
+    }
+  }
+  .frontEnd{
+    img {
+      width: 50px;
+      margin: 10px 0px;
+      @media (max-width: 600px) {
+        width: 100% !important;
+        margin:10px;
+      }
+    }
+  }
+  }
+}

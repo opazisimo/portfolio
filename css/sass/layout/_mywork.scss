@@ -1,0 +1,23 @@
+#myWork {
+  @include gralStyle;
+  @include titulos;
+  .subti {
+    @include subraya;
+  }
+    .texto {
+    margin: 50px;
+    text-align: center;
+    p{
+    font-size: 1.2em;
+    }
+  }
+  .thumbnail{
+    border-radius: 0px !important;
+    img {
+      -webkit-filter: grayscale(100%);
+      &:hover {
+        -webkit-filter: grayscale(0%);
+      }
+    }
+  }
+}
